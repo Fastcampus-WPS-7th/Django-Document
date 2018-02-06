@@ -3,23 +3,13 @@ from datetime import datetime
 from django.db import models
 from django.utils import timezone
 
-
-class Topping(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-
-
-class Pizza(models.Model):
-    name = models.CharField(max_length=50)
-    toppings = models.ManyToManyField(Topping)
-
-    def __str__(self):
-        return self.name
+__all__ = (
+    'Post',
+    'User',
+    'PostLike',
+)
 
 
-# Extra fields on many-to-many relationships (Basic)
 class Post(models.Model):
     title = models.CharField(max_length=50)
     like_users = models.ManyToManyField(
