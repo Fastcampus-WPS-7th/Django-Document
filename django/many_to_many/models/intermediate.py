@@ -24,12 +24,18 @@ class Post(models.Model):
         related_name='like_posts',
     )
 
+    class Meta:
+        verbose_name_plural = 'Intermediate - Post'
+
     def __str__(self):
         return self.title
 
 
 class User(models.Model):
     name = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name_plural = 'Intermediate - User'
 
     def __str__(self):
         return self.name
@@ -47,6 +53,9 @@ class PostLike(models.Model):
     created_date = models.DateTimeField(
         auto_now_add=True
     )
+
+    class Meta:
+        verbose_name_plural = 'Intermediate - PostLike'
 
     def __str__(self):
         # 글 title이 "공지사항"이며
