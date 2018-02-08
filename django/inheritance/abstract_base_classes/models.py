@@ -11,3 +11,28 @@ class CommonInfo(models.Model):
 
 class Student(CommonInfo):
     home_group = models.CharField(max_length=5)
+
+
+# Be careful with related_name and related_query_name
+class Other(models.Model):
+    pass
+
+
+class Base(models.Model):
+    other = models.ForeignKey(
+        Other,
+        on_delete=models.CASCADE,
+        related_name='%(app_label)s_%(class)s_set',
+        related_query_name='%(app_label)s_%(class)s',
+    )
+
+    class Meta:
+        abstract = True
+
+
+class ChildA(Base):
+    pass
+
+
+class ChildB(Base):
+    pass
