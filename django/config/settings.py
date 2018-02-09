@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django_extensions',
+
     'myapp',
 
     'relations.foreignkey.apps.ForeignkeyConfig',
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     'inheritance.abstract_base_classes',
     'inheritance.rel.apps.RelConfig',
     'inheritance.multi_table.apps.MultiTableConfig',
+    'inheritance.proxy.apps.ProxyConfig',
 ]
 
 MIDDLEWARE = [
