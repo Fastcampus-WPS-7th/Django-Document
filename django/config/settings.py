@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'inheritance.proxy.apps.ProxyConfig',
     'inheritance.proxy_manager.apps.ProxyManagerConfig',
     'inheritance.custom_manager.apps.CustomManagerConfig',
+    'inheritance.multiple_inheritance.apps.MultipleInheritanceConfig',
 ]
 
 MIDDLEWARE = [
