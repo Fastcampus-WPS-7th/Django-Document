@@ -18,7 +18,7 @@ class AdminManager(Manager):
 
 
 class Admin(User):
-    objects = AdminManager()
+    admin_objects = AdminManager()
 
     class Meta:
         proxy = True
